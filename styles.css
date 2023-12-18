@@ -1,0 +1,385 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Columns */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column {
+    flex: 1;
+    padding-right: 50px;
+    min-width: 350px; /* Set a minimum width */
+}
+
+.right-column {
+    flex: 2;
+    min-width: 700px; /* Set a minimum width */
+}
+
+/* Social Links */
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none !important;
+}
+
+.social-links img {
+    width: 32px; /* Set the width of the icon */
+    height: 32px; /* Set the height of the icon */
+    border: none; /* Remove border */
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.profile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* Styles */
+
+:root {
+    --font-main: 'Roboto Mono', monospace;
+    --font-secondary: 'Roboto Mono', monospace;
+    --font-scale: .9em;
+    --background-color: #fff;
+    --heading-color: #232333;
+    --text-color: #232333;
+    --link-color: #232333;
+    --visited-color: #232333;
+    --main-color: #ff0000;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin:auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Navigation */
+
+nav {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px; /* Adjust the gap between elements */
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--main-color);
+    font-family: var(--font-main);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid #dfe2e5;
+    transition: color 0.3s;
+    margin-right: 8px
+}
+
+nav a:hover {
+    color: var(--main-color);
+    background-color: #f2f2f2;
+}
+
+/* Headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+/* Badges */
+
+.badge {
+    background-color: var(--main-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Skill Columns */
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    max-width: 30%; /* You can adjust the max-width based on your design preference */
+}
+
+/* Add Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media only screen and (max-width: 767px) {
+    .column {
+        max-width: 100%;
+    }
+}
+
+/* Skills */
+
+a {
+    color: var(--main-color);
+    font-family: var(--font-main);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* Blinking cursor for the title of the website */
+
+header {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: '|';
+    animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.title h1 {
+    font-size: 1.5em;
+    display: inline;
+}
+
+strong,
+b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+main {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 3px dotted #232333;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight,
+.code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* Certifications */
+
+    #certifications {
+        text-align: left;
+    }
+    
+    .certificates-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    
+    .certificate-entry {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .certificate-entry:last-child {
+        border-bottom: none;
+    }
+
+/* Timeline */
+
+    #timeline {
+        text-align: left;
+    }
+    
+    .timeline-list {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    .timeline-entry {
+        max-width: 600px;
+        width: 100%;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+    }
+    
+    .timeline-date {
+        font-weight: bold;
+    }
+    
+    .timeline-role {
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    
+    .timeline-company {
+        color: #555;
+    }
+    
+    ul {
+        padding-left: 20px;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
+
+    /* Highlight */
+
+    .highlight {
+        background-color: rgba(255, 0, 0, 0.2); /* Adjust the transparency as needed */
+        display: inline;
+        padding: 0 2px; 
+        margin: 0 2px; 
+    }
+
+    /* Add Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header {
+        font-size: 11px;
+    }
+
+    .left-column,
+    .right-column {
+        min-width: auto;
+        padding: 0;
+    }
+
+    .social-links {
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .profile img {
+        margin-top: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .timeline-list,
+    .certificates-list,
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For screens between 768px and 1023px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 20px;
+    }
+}
+}
+
