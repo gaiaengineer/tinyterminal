@@ -5,11 +5,11 @@
 
 ## Inspiration
 
-## Quick Start
+## Quick start
 
-## Layout
+## Layout and navigation
 
-## Portfolio Sections: how to use and customize
+## Portfolio sections: how to use and customize
 
 ### Toolbox (aka Skills) 
 ### Education 
